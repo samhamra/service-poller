@@ -1,0 +1,6 @@
+CREATE DATABASE IF NOT EXISTS dev;
+USE dev;
+CREATE TABLE IF NOT EXISTS Service (
+	name VARCHAR(30),
+       	url VARCHAR(200)
+)
