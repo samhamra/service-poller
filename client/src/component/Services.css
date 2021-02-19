@@ -1,0 +1,27 @@
+.status:before {
+  content: ' \25CF';
+  font-size: 20px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+.blink {
+  animation: blink-animation 2s steps(20, start) infinite;
+  -webkit-animation: blink-animation 2s steps(20, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
