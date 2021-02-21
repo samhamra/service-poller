@@ -4,7 +4,7 @@ HOW TO RUN:
 From project root run:
 docker-compose up   
 OR.  
-run your own mysql instance on port 3309 and run server/sql.init
+run your own mysql instance on port 3309 and run server/sql.init, the settings required is stated in docker-compose.yml 
 
 2. JDK8 and Gradle
 From server/ run:
