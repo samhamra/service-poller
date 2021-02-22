@@ -7,10 +7,10 @@ docker-compose up<br/>
 Or run your own mysql with the settings stated in docker-compose.yml 
 
 2. JDK8 and Gradle
-From server/ run:
+From server/ run:  
 ./gradlew run
 
 3. ReactJS
 
-From client/ run:
+From client/ run:  
 npm install && npm start
