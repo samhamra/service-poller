@@ -10,7 +10,7 @@ Or run your own mysql with the settings stated in docker-compose.yml
 From server/ run:  
 ./gradlew run
 
-3. ReactJS
+3. NPM  & ReactJS
 
 From client/ run:  
 npm install && npm start
