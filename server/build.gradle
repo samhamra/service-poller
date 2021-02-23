@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'service.poller.App'
+
+dependencies {
+    testImplementation 'junit:junit:4.13'
+    implementation 'io.vertx:vertx-mysql-client:4.0.2'
+    implementation 'io.vertx:vertx-web-client:4.0.2'
+    implementation 'io.vertx:vertx-web:4.0.2'
+    implementation 'com.google.guava:guava:29.0-jre'
+}
+
+repositories {
+    jcenter()
+}
+

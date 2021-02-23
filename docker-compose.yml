@@ -17,3 +17,9 @@ services:
     ports:
       - 4200:80
 
+
+  backend:
+    build: ./server
+    container_name: java
+    ports:
+      - 9090:9090
