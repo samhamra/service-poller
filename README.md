@@ -1,3 +1,5 @@
+EDIT: This project can now be viewed live at www.samhamra.com. 
+
 HOW TO RUN:    
 If you have docker and docker-compose installed, run from project root   
 docker-compose up
