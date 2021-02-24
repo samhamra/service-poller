@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import AddServiceForm from './AddServiceForm';
 import './Services.css'
-import { getServices, addService, removeService } from '../api/api.js'
+import { api } from '../api/api.js'
 
 export default function Services(props) {
   let { username } = useParams();
@@ -14,18 +14,18 @@ export default function Services(props) {
   }, []);
   
   function update() {
-    getServices(username)
+    api.getServices(username)
     .then(response => response.json())
     .then(data => setServices(data))
   }
   
   function addHandler(name, url) {
-    addService(username, name, url)
+    api.addService(username, name, url)
     .then(update)
   }
   
   function removeHandler(id) {
-    removeService(username, id)
+    api.removeService(username, id)
     .then(update)
   }
 

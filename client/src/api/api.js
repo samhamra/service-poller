@@ -1,4 +1,4 @@
-const SERVER_URL = 'http://localhost:9090'
+const SERVER_URL = 'http://localhost:9090';
 
 function getServices(username) {  
   return fetch(`${SERVER_URL}/${username}/services`)
@@ -19,4 +19,4 @@ function removeService(username, id) {
   return fetch(`${SERVER_URL}/${username}/services/${id}`, {  method: "DELETE" })
 }
   
-export { getServices, addService, removeService }
+export const api = { getServices, addService, removeService };
