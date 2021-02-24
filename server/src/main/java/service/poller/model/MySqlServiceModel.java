@@ -22,7 +22,7 @@ public class MySqlServiceModel implements ServiceModel{
     private final static String DEFAULT_DATABASE = "dev";
     private final static String DEFAULT_USER = "root";
     private final static String DEFAULT_PASSWORD = "secret";
-    private final static int DEFAULT_PORT = 3306;
+    private final static int DEFAULT_PORT = 3309;
     private final MySQLPool client;
 
     public MySqlServiceModel(String host, int port, String database, String user, String password) {

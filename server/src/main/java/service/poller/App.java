@@ -11,7 +11,7 @@ import service.poller.web.WebService;
 public class App {
     public static void main(String[] args) {
         Vertx vertx = Vertx.vertx();
-        ServiceModel model = new MySqlServiceModel("database", 3306, "dev", "root", "secret");
+        ServiceModel model = new MySqlServiceModel();
         new PollingController(vertx, model);
         new WebService(vertx, model);
     }
