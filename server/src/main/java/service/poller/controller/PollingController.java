@@ -17,13 +17,10 @@ public class PollingController {
     }
 
     private void poll() {
-        model.getAllServices().onComplete(ar -> {
-            if(ar.succeeded()) {
-                ar.result().forEach(this::makeRequest);
-            } else {
-                System.out.println(ar.cause());
-            }
-        });
+        model
+                .getAllServices()
+                .onSuccess(services -> services.forEach(this::makeRequest))
+                .onFailure(as-> System.out.println(as.getMessage()));
     }
 
     public void makeRequest(ServiceModel.Service service) {
@@ -32,7 +29,7 @@ public class PollingController {
                 .timeout(TIME_OUT)
                 .send()
                 .onSuccess(response -> {
-                    model.setStatus(service.getUser(), service.getId(),  1);
+                    model.setStatus(service.getUser(), service.getId(), 1);
                 })
                 .onFailure(err -> {
                     model.setStatus(service.getUser(), service.getId(), 0);
